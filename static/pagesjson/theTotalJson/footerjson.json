@@ -1,0 +1,24 @@
+{
+	"data":[
+		{
+			"title":"首页",
+			"spanimg":"&#xe654;",
+			"jump":"/homeIndex"
+		},
+		{
+			"title":"发现",
+			"spanimg":"&#xe8e7;",
+			"jump":"/foundIndex"
+		},
+		{
+			"title":"会员",
+			"spanimg":"&#xe653;",
+			"jump":"/membersIndex"
+		},
+		{
+			"title":"我的",
+			"spanimg":"&#xe655;",
+			"jump":"/myIndex"
+		}
+	]
+}

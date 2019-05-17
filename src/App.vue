@@ -16,4 +16,33 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+html,body,#app{
+	width: 100%;
+	height: 100%;
+}
+#app>div{
+	width: 100%;
+	height: 100%;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 1103404 */
+  src: url('//at.alicdn.com/t/font_1103404_xqaos7es3o.eot');
+  src: url('//at.alicdn.com/t/font_1103404_xqaos7es3o.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1103404_xqaos7es3o.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1103404_xqaos7es3o.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1103404_xqaos7es3o.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1103404_xqaos7es3o.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
 </style>
