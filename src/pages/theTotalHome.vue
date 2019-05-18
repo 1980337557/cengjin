@@ -27,7 +27,6 @@ export default {
 		var url = "../../static/pagesjson/theTotalJson/footerjson.json"
 		this.axios.get(url).then((response) => {
 			this.footli = response.data.data
-			console.log(response.data)
 		})
 	},
 	methods:{

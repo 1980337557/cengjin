@@ -10,9 +10,17 @@
 				<span class="iconfont">&#xe6c7;</span>
 				<span class="iconfont">&#xe656;</span>
 			</div>
-			<div>
-				<div class="ulbox"></div>
-				<div class="xiabox"></div>
+			<div class="classbox">
+				<div class="ulbox">
+					<van-tabs>
+						<van-tab v-for="(teamp,index) in ulliarr" :title="teamp.title">
+
+						</van-tab>
+					</van-tabs>
+				</div>
+				<div class="xiabox">
+					<span class="iconfont">&#xe6aa;</span>
+				</div>
 			</div>
 		</div>
 		<div class="homesec">
@@ -25,9 +33,19 @@
 export default {
   data () {
     return {
-			
+			ulliarr:[],
+			liids:0
     }
-  }
+  },
+	created(){
+		var url = "../../../static/pagesjson/theTotalJson/ulli.json"
+		this.axios.get(url).then((response) => {
+			this.ulliarr = response.data.data
+		})
+	},
+	methods:{
+		
+	}
 }
 </script>
 
@@ -80,5 +98,19 @@ export default {
 }
 .homesec{
 	width: 100%;
+}
+.classbox{
+	display: flex;
+}
+.ulbox{
+	width: 90%;
+	height: 100%;
+}
+.xiabox{
+	width: 10%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 </style>
