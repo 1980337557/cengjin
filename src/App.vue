@@ -45,4 +45,35 @@ html,body,#app{
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+.van-tabs__nav {
+	width: 80%;
+	height: 98% !important;
+	padding-bottom: 0rem;
+	padding: 0 1.04rem 0 0;
+	margin-left: 0.31rem;
+}
+.van-tabs__line{
+	height: 0.04rem;
+	bottom: 0;
+}
+.van-tabs{
+	padding-top: 1.04rem;
+	height: 1382%;
+}
+.van-tabs__content{
+	height: 100%;
+}
+.van-tabs__content>div{
+	height: 100%;
+}
+.van-tab{
+	height: 100%;
+	padding: 0rem;
+}
+.van-tab>span{
+	height: 100%;
+}
+.van-tabs__wrap{
+	height: 1.04rem !important;
+}
 </style>

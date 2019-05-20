@@ -55,7 +55,8 @@ export default {
 }
 .secbox{
 	width: 100%;
-	padding-bottom: 1.04rem;
+	height: 100%;
+	padding-bottom: 1.29rem;
 	box-sizing: border-box;
 }
 .secbox>div{

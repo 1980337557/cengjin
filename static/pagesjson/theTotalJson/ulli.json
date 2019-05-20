@@ -2,88 +2,130 @@
 	"data":[
 		{
 			"title":"精选",
-			"jump":"/select"
+			"jump":"/select",
+			"classa":"select",
+			"layout":1
 		},
 		{
 			"title":"电视剧",
-			"jump":"/"
+			"jump":"/tvSeries",
+			"classa":"tvSeries",
+			"layout":2
 		},
 		{
 			"title":"电影",
-			"jump":"/"
+			"jump":"/theMovie",
+			"classa":"theMovie",
+			"layout":2
 		},
 		{
 			"title":"动漫",
-			"jump":"/"
+			"jump":"/anime",
+			"classa":"anime",
+			"layout":2
 		},
 		{
 			"title":"综艺",
-			"jump":"/"
+			"jump":"/variety",
+			"classa":"variety",
+			"layout":2
 		},
 		{
 			"title":"会员",
-			"jump":"/"
+			"jump":"/members",
+			"classa":"members",
+			"layout":2
 		},
 		{
 			"title":"少儿",
-			"jump":"/"
+			"jump":"/children",
+			"classa":"children",
+			"layout":2
 		},
 		{
 			"title":"搞笑",
-			"jump":"/"
+			"jump":"/funny",
+			"classa":"funny",
+			"layout":3
 		},
 		{
 			"title":"娱乐",
-			"jump":"/"
+			"jump":"/entertainment",
+			"classa":"entertainment",
+			"layout":3
 		},
 		{
 			"title":"教育",
-			"jump":"/"
+			"jump":"/education",
+			"classa":"education",
+			"layout":3
 		},
 		
 		{
 			"title":"记录片",
-			"jump":"/"
+			"jump":"/theDocumentary",
+			"classa":"theDocumentary",
+			"layout":3
 		},
 		{
 			"title":"原创",
-			"jump":"/"
+			"jump":"/original",
+			"classa":"original",
+			"layout":3
 		},
 		{
 			"title":"财经",
-			"jump":"/"
+			"jump":"/economics",
+			"classa":"economics",
+			"layout":3
 		},
 		{
 			"title":"生活",
-			"jump":"/"
+			"jump":"/life",
+			"classa":"life",
+			"layout":3
 		},
 		{
 			"title":"体育",
-			"jump":"/"
+			"jump":"/sports",
+			"classa":"sports",
+			"layout":3
 		},
 		{
 			"title":"MV",
-			"jump":"/"
+			"jump":"/mv",
+			"classa":"mv",
+			"layout":3
 		},
 		{
 			"title":"游戏",
-			"jump":"/"
+			"jump":"/game",
+			"classa":"game",
+			"layout":3
 		},
 		{
 			"title":"新闻",
-			"jump":"/"
+			"jump":"/news",
+			"classa":"news",
+			"layout":3
 		},
 		{
 			"title":"母婴",
-			"jump":"/"
+			"jump":"/maternalAndInfant",
+			"classa":"maternalAndInfant",
+			"layout":3
 		},
 		{
 			"title":"科技",
-			"jump":"/"
+			"jump":"/scienceAndTechnology",
+			"classa":"scienceAndTechnology",
+			"layout":3
 		},
 		{
 			"title":"热播",
-			"jump":"/"
+			"jump":"/hit",
+			"classa":"hit",
+			"layout":4
 		}
 	]
 }
