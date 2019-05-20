@@ -113,4 +113,7 @@ export default {
 	justify-content: center;
 	align-items: center;
 }
+.van-tabs__nav--line{
+	box-sizing: border-box;
+}
 </style>
