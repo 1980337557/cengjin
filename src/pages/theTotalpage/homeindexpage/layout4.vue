@@ -11,7 +11,7 @@
 export default {
   data () {
     return {
-			list:""
+			
     }
   },
 	props:{
@@ -27,7 +27,6 @@ export default {
 <style scoped>
 .layout4{
 	width: 100%;
-	height: 100%;
 	background: pink;
 }
 </style>

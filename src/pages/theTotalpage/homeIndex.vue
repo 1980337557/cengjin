@@ -15,6 +15,7 @@
 					title-active-color="orangered" 
 					v-model="active" 
 					@click="onClick" 
+					@change="handleChange"
 					swipeable
 				>
 					<van-tab 
@@ -47,7 +48,16 @@
 					</van-tab>
 				</van-tabs>
 			</div>
-			<div class="xiabox"><span class="iconfont">&#xe6aa;</span></div>
+			<div class="xiabox" @click="dingclick"><span class="iconfont" v-html="intou">{{intou}}</span></div>
+			<div :class="{dingweibox:dingbolean==false,dingweibox1:dingbolean==true}">
+				<div class="spanbox">全部频道</div>
+				<div class="spanbox">可长按拖拽排序</div>
+				<div class="spanclass">
+					<div v-for="(iteam,index) in ulliarr" :class="{onli:index==active}" @click="dianjili(index)">
+						{{iteam.title}}
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -62,7 +72,9 @@ export default {
 		return {
 			ulliarr: [],
 			active: 0,
-			lister:[]
+			lister:[],
+			dingbolean:false,
+			intou:"&#xe6aa;"
 		};
 	},
 	created() {
@@ -70,6 +82,7 @@ export default {
 		this.axios.get(url).then(response => {
 			this.ulliarr = response.data.data;
 		});
+		this.handleChange()
 	},
 	components:{
 		layout1,
@@ -80,69 +93,85 @@ export default {
 	methods: {
 		onClick(index, title) {
 			this.$toast(title);
+		},
+		dingclick(){
+			if(this.dingbolean==false){
+				this.dingbolean = true
+				this.intou="&#xe65e;"
+			}else if(this.dingbolean==true){
+				this.dingbolean = false
+				this.intou="&#xe6aa;"
+			}
+		},
+		dianjili(index){
+			this.dingbolean = false
+			this.active=index
+			this.intou="&#xe6aa;"
+		},
+		handleChange(){
 			switch(this.active){
 				case 0:
-					this.lister = [1,2,3,4,5,6]
+					this.lister = []
 				break;
 				case 1:
-					this.lister = [1,1,1,1]
+					this.lister = []
 				break;
 				case 2:
-					this.lister = [2,2,2,2,2]
+					this.lister = []
 				break;
 				case 3:
-					this.lister = [3,3,3]
+					this.lister = []
 				break;
 				case 4:
-					this.lister = [4,4,4]
+					this.lister = []
 				break;
 				case 5:
-					this.lister = [5,5]
+					this.lister = []
 				break;
 				case 6:
-					this.lister = [6,6]
+					this.lister = []
 				break;
 				case 7:
-					this.lister = [7,7]
+					this.lister = []
 				break;
 				case 8:
-					this.lister = [8,8]
+					this.lister = []
 				break;
 				case 9:
-					this.lister = [9,9]
+					this.lister = []
 				break;
 				case 10:
-					this.lister = [10,10]
+					this.lister = []
 				break;
 				case 11:
-					this.lister = [11,11]
+					this.lister = []
 				break;
 				case 12:
-					this.lister = [12,12]
+					this.lister = []
 				break;
 				case 13:
-					this.lister = [13,13]
+					this.lister = []
 				break;
 				case 14:
-					this.lister = [14,14]
+					this.lister = []
 				break;
 				case 15:
-					this.lister = [15,15]
+					this.lister = []
 				break;
 				case 16:
-					this.lister = [16,16]
+					this.lister = []
 				break;
 				case 17:
-					this.lister = [17,17]
+					this.lister = []
 				break;
 				case 18:
-					this.lister = [18,18]
+					this.lister = []
 				break;
 				case 19:
-					this.lister = [19,19]
+					this.lister = []
 				break;
 				case 20:
-					this.lister = [20,20]
+					this.lister = []
 				break;
 			}
 		}
@@ -164,6 +193,11 @@ export default {
 	align-items: center;
 	padding: 0 0.41rem;
 	box-sizing: border-box;
+	position: fixed;
+	top: 0rem;
+	left: 0rem;
+	background: white;
+	z-index: 80;
 }
 .homediv1 > div {
 	width: 5.89rem;
@@ -189,25 +223,67 @@ export default {
 }
 .classbox {
 	flex: 1;
-	position: relative;
 }
 .ulbox {
 	width: 100%;
-	height: 1.04rem;
+	height: 100%;
 	border-bottom: 0.02rem solid #999999;
 }
-.layout1{
-	height: 100%;
-}
-.xiabox {
+.xiabox{
 	width: 10%;
-	height: 1.04rem;
+	height: 1.02rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: absolute;
+	position: fixed;
 	right: 0.2rem;
-	top: 0rem;
-	z-index: 99;
+	top: 1.04rem;
+	z-index: 90;
+	background: white;
+}
+.dingweibox{
+	display: none;
+}
+.dingweibox1{
+	width: 100%;
+	height: 87%;
+	background: white;
+	position: fixed;
+	top: 1.04rem;
+	left: 0rem;
+	z-index: 86;
+}
+.dingweibox1>.spanbox{
+	width: 100%;
+	height: 0.62rem;
+	padding: 0 0.41rem;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	font-size: 0.33rem;
+	color: #999999;
+}
+.spanclass{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-left: 0.41rem;
+	box-sizing: border-box;
+}
+.spanclass>div{
+	width: 19%;
+	height: 0.83rem;
+	border: 0.04rem solid #EFEFEF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0.2rem 0.41rem 0.2rem 0;
+	font-size: 0.41rem;
+	border-radius: 0.08rem;
+}
+.spanclass>.onli{
+	background: orangered;
+	color: white;
 }
 </style>

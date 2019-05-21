@@ -7,6 +7,8 @@ import router from './router'
 import Vant from 'vant';
 import 'vant/lib/index.css';
 
+import 'animate.css'
+
 Vue.use(Vant);
 
 Vue.config.productionTip = false

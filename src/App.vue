@@ -57,17 +57,9 @@ html,body,#app{
 	bottom: 0;
 }
 .van-tabs{
-	padding-top: 1.04rem;
-	height: 1382%;
-}
-.van-tabs__content{
-	height: 100%;
-}
-.van-tabs__content>div{
-	height: 100%;
+	padding-top: 2.08rem;
 }
 .van-tab{
-	height: 100%;
 	padding: 0rem;
 }
 .van-tab>span{
@@ -75,5 +67,15 @@ html,body,#app{
 }
 .van-tabs__wrap{
 	height: 1.04rem !important;
+	border-bottom: 0.02rem solid #999999;
+	position: fixed;
+	top: 1.04rem;
+	left: 0rem;
+	background: white;
+	z-index: 80;
+}
+.van-tab__pane{
+	padding-bottom: 1.33rem;
+	box-sizing: border-box;
 }
 </style>
