@@ -16,7 +16,7 @@
   "dependencies": {
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
-    "vant": "^1.6.18",
+    "vant": "^2.1.8",
     "vant-weapp": "^0.5.13",
     "vue": "^2.5.2",
     "vue-axios": "^2.1.4",
